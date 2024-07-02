@@ -12,7 +12,7 @@ def start_screen(stdscr):
 
 def display_text(stdscr, target, current, wpm=0):
     stdscr.addstr(target)
-    stdscr.addstr(1, 0, f"WPM: {wpm}")      
+    stdscr.addstr(5, 0, f"WPM: {wpm}")      
 
     for i,  char in enumerate(current):
         correct_char = target[i]
@@ -70,7 +70,7 @@ def main(stdscr):
 
     while True:
         wpm_test(stdscr)
-        stdscr.addstr(2, 0, "You have compoleted the test! Press any key to continue...")
+        stdscr.addstr(2, 0, "You have completed the test! Press any key to continue...")
         key = stdscr.getkey()
 
         if ord(key) == 27:
